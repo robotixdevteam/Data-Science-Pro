@@ -1,6 +1,6 @@
 # DataSciensPro: A Comprehensive Educational Solution for Global Challenges
 
-[![Data Sciens Pro](https://robotixdevteam.github.io/Data-Science-Pro/DataSciensPro.html)](https://robotixdevteam.github.io/Data-Science-Pro/DataSciensPro.html)
+[![Data Sciens Pro](https://github.com/robotixdevteam/Data-Science-Pro/blob/main/favicon.ico)](https://robotixdevteam.github.io/Data-Science-Pro/DataSciensPro.html)
 
 ## What is DataSciensPro?
 DataSciensPro is an innovative educational solution designed to empower students to engage with real-world global challenges through hands-on learning and data-driven problem-solving. The project aligns with four key **United Nations Sustainable Development Goals (UNSDGs)**:
