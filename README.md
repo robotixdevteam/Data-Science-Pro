@@ -2,13 +2,6 @@
 
 [![Data Sciens Pro](https://github.com/robotixdevteam/Data-Science-Pro/blob/main/data-sciens-logo.png)](https://robotixdevteam.github.io/Data-Science-Pro/DataSciensPro.html)
 
-## Updates
-
-| **Release** | **Summary** |
-|-------------|-------------|
-| [DSPRO v1.0.0.1](https://drive.google.com/file/d/1KTfKcgE5_0lQnCeXgFei6F78PHR7abWs/view?usp=sharing) | Initial release of DataSciensPro with core features. |
-| [DSPRO v1.0.0.2](https://drive.google.com/file/d/178UYeDWGetL_bUCqvQff_ZK1tsWNHLCa/view?usp=sharing) | Included new troubleshooting guide. |
-
 ## What is DataSciensPro?
 DataSciensPro is an innovative educational solution designed to empower students to engage with real-world global challenges through hands-on learning and data-driven problem-solving. The project aligns with four key **United Nations Sustainable Development Goals (UNSDGs)**:
 
@@ -18,6 +11,13 @@ DataSciensPro is an innovative educational solution designed to empower students
 - **Zero Hunger**
 
 DataSciensPro enables students to **collect, analyze, and interpret** environmental and health-related data in real-time. The platform integrates a software interface with tools for **data visualization**, allowing students to understand complex problems and develop solutions using **data science and technology**.
+
+## Updates
+
+| **Release** | **Summary** |
+|-------------|-------------|
+| [DSPRO v1.0.0.1](https://drive.google.com/file/d/1KTfKcgE5_0lQnCeXgFei6F78PHR7abWs/view?usp=sharing) | Initial release of DataSciensPro with core features. |
+| [DSPRO v1.0.0.2](https://drive.google.com/file/d/178UYeDWGetL_bUCqvQff_ZK1tsWNHLCa/view?usp=sharing) | Included new troubleshooting guide. |
 
 ## Key Features
 - **Hands-On Sensor Integration**: Students interact with a range of sensors to collect data on environmental and health-related parameters. 
