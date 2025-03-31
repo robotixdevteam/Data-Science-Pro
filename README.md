@@ -16,8 +16,8 @@ DataSciensPro enables students to **collect, analyze, and interpret** environmen
 
 | **Release** | **Summary** |
 |-------------|-------------|
-| [DSPRO v1.0.0.1](https://drive.google.com/file/d/1KTfKcgE5_0lQnCeXgFei6F78PHR7abWs/view?usp=sharing) | Initial release of DataSciensPro with core features. |
 | [DSPRO v1.0.0.2](https://drive.google.com/file/d/178UYeDWGetL_bUCqvQff_ZK1tsWNHLCa/view?usp=sharing) | Included new troubleshooting guide. |
+| [DSPRO v1.0.0.1](https://drive.google.com/file/d/1KTfKcgE5_0lQnCeXgFei6F78PHR7abWs/view?usp=sharing) | Initial release of DataSciensPro with core features. |
 
 ## Key Features
 - **Hands-On Sensor Integration**: Students interact with a range of sensors to collect data on environmental and health-related parameters. 
