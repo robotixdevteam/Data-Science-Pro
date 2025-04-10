@@ -16,7 +16,7 @@ DataSciensPro enables students to **collect, analyze, and interpret** environmen
 
 | **Release** | **Summary** |
 |-------------|-------------|
-| [DSPRO v1.0.0.2](https://drive.google.com/file/d/13m8TvZbz5NGy-k7lJfVPjMuk2Fhyj-ke/view?usp=sharing) | Included new troubleshooting guide, PuTTY based Data Collection, and DSPRO Configuration Tool |
+| [DSPRO v1.0.0.2](https://drive.google.com/file/d/13m8TvZbz5NGy-k7lJfVPjMuk2Fhyj-ke/view?usp=sharing) | Updated troubleshooting guide, PuTTY based Data Collection, & DSPRO Configuration Tool |
 | [DSPRO v1.0.0.1](https://drive.google.com/file/d/1KTfKcgE5_0lQnCeXgFei6F78PHR7abWs/view?usp=sharing) | Initial release of DataSciensPro with core features. |
 
 ## Key Features
