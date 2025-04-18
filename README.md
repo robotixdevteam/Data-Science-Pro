@@ -16,7 +16,7 @@ DataSciensPro enables students to **collect, analyze, and interpret** environmen
 
 | **Release** | **Summary** |
 |-------------|-------------|
-| [DSPRO v1.0.0.2](https://drive.google.com/file/d/13m8TvZbz5NGy-k7lJfVPjMuk2Fhyj-ke/view?usp=sharing) | Updated troubleshooting guide, PuTTY based Data Collection, & DSPRO Configuration Tool |
+| [DSPRO v1.0.0.2](https://drive.google.com/file/d/1WFF4sCYnX0Ox5KcEDZpFyiIRyMB7_2F4/view?usp=sharing) | PuTTY based Data Collection, DSPRO Configuration Tool & DSPRO Uninstall Process (DUP) |
 | [DSPRO v1.0.0.1](https://drive.google.com/file/d/1KTfKcgE5_0lQnCeXgFei6F78PHR7abWs/view?usp=sharing) | Initial release of DataSciensPro with core features. |
 
 ## Key Features
@@ -36,11 +36,11 @@ DataSciensPro offers a series of **guided, hands-on experiments** that encourage
 - **Global Awareness**: Students enhance their understanding of **global challenges** like climate change, public health, urbanization, and sustainable agriculture. This **instills a sense of global citizenship and social responsibility**, encouraging them to use their skills for **positive impact**.
 
 ## Installation
-All necessary installation files for **DSPRO Software, Miniconda, and Microsoft Power BI** can be found on the official [DSPRO homepage](https://robotixdevteam.github.io/Data-Science-Pro/DataSciensPro.html). Follow the instructions provided there to complete the setup.
+All necessary installation files for **DSPRO Software, Miniconda, and Microsoft Power BI** can be found on the official [DSPRO Homepage](https://robotixdevteam.github.io/Data-Science-Pro/DataSciensPro.html). Follow the instructions provided there to complete the setup.
 
 
 ## Support
-For issues or contributions, please contact the development team through our official [DSPRO homepage](https://robotixdevteam.github.io/Data-Science-Pro/DataSciensPro.html) and via [Email](development@merituseducation.com).
+For issues or contributions, please contact the development team through our official [DSPRO Homepage](https://robotixdevteam.github.io/Data-Science-Pro/DataSciensPro.html) and via [Email](development@merituseducation.com).
 
 ---
 🚀 **Empowering students with real-world data science solutions!**
