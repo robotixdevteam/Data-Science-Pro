@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataSciensPro</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" /> <!-- Favicon link -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #deefff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 1em 0;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, rgba(16, 126, 253, 1), rgba(147, 54, 239, 1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 85vh; /* Adjusted height to fill viewport */
+      margin-top: -50px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    th, td {
+      border: 1px solid #000;
+      text-align: center;
+      padding: 20px;
+    }
+    th {
+      background-color: rgb(1, 134, 255);
+      color: white;
+      font-size: 20px;
+    }
+    th:nth-child(3) {
+      background-color: #deefff;
+    }
+    .noborder {
+      border: none; /* No border for this column */
+    }
+    .info-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative; /* Position relative for tooltip positioning */
+    }
+    .info-icon i {
+      font-size: 18px; /* Adjust icon size */
+      color: #333; /* Adjust icon color */
+      cursor: pointer; /* Pointer cursor for better UX */
+    }
+    .tooltip {
+      visibility: hidden;
+      width: 300px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: calc(100% + 10px); /* Position to the right of the icon */
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .info-icon:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+    }
+    .icon {
+      font-size: 24px;
+      margin: 0 20px;
+      color: #333; /* Adjust icon color */
+    }
+    .icon:hover {
+      color: #007bff; /* Change icon color on hover */
+      transform: scale(1.1); /* Increase icon size on hover */
+    }
+    .info-icon:hover i {
+      color: #ff0000; /* Change icon color on hover */
+      transform: scale(1.1); /* Increase icon size on hover */
+    }
+
+    /* Styles for the popup */
+    .popup {
+      display: none; /* Hidden by default */
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      padding: 20px;
+      background: white;
+      border: 2px solid #007bff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      text-align: center;
+    }
+    .popup input[type="password"] {
+      width: calc(100% - 22px); /* Adjusted width to fit with eye icon */
+      padding: 10px;
+      border: 2px solid #007bff;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      position: relative; /* Position relative for eye icon */
+    }
+    .popup button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .popup button:hover {
+      background-color: #0056b3;
+    }
+    .message {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .success {
+      color: rgb(5, 174, 5);
+    }
+    .error {
+      color: red;
+    }
+    .overlay {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  </style>
+  <!-- Font Awesome CSS link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." />
+</head>
+<body>
+  <header>
+    <h1>Welcome to <span class="gradient-text">DataSciensPro</span></h1>
+  </header>
+  <main>
+    <table>
+      <tr>
+        <th>Pre-Requisites</th>
+        <th>Download Links</th>
+        <th class="noborder"></th> <!-- Third column with no border -->
+      </tr>
+      <tr>
+        <td><b>DSPRO Software</b></td>
+        <td><a href="#" id="dspSetupLink">Click here to download DSPRO Software</a></td>
+        <td class="noborder info-icon">
+          <a href="https://drive.google.com/file/d/1fIkkAdUdd-2VHgkgUeeA8TFst3oyOs7p/view?usp=sharing" target="_blank">
+            <i class="fas fa-exclamation" title="DSPRO"></i>
+          </a>
+          <span class="tooltip">The downloaded file should be extracted in the User-Profile path <br /><br />Ex: <b>C:\Users\John</b></span>
+        </td> <!-- Info icon in circle with tooltip -->
+      </tr>
+      <tr>
+        <td><b>Miniconda</b></td>
+        <td>
+          <a href="https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe" download>Click here to download Miniconda</a>
+        </td>
+        <td class="noborder info-icon">
+          <i class="fas fa-exclamation" title="Miniconda"></i>
+          <span class="tooltip">Download and extract the same in your User-Profile path <br /><br /><b>Ignore if already exists</b></span>
+        </td> <!-- Info icon in circle with tooltip -->
+      </tr>
+      <tr>
+        <td><b>Microsoft Power BI</b></td>
+        <td>
+          <a href="https://download.microsoft.com/download/8/8/0/880BCA75-79DD-466A-927D-1ABF1F5454B0/PBIDesktopSetup.exe" download>PBIDesktopSetup.exe</a> /
+          <a href="https://download.microsoft.com/download/8/8/0/880BCA75-79DD-466A-927D-1ABF1F5454B0/PBIDesktopSetup_x64.exe" download>PBIDesktopSetup_x64.exe</a>
+        </td>
+        <td class="noborder info-icon">
+          <i class="fas fa-exclamation" title="Power BI"></i>
+          <span class="tooltip">Download your requirement and extract the same to C:\Program Files <br /><br /><b>Ignore if already exists</b></span>
+        </td> <!-- Info icon in circle with tooltip -->
+      </tr>
+    </table>
+
+    <!-- Icons section -->
+    <div class="icons">
+      <a href="https://www.facebook.com/meritusai/" target="_blank"><i class="fab fa-facebook-f icon"></i></a>
+      <a href="https://www.instagram.com/meritus.ai/" target="_blank"><i class="fab fa-instagram icon"></i></a>
+      <a href="https://x.com/MeritusAI" target="_blank"><i class="fab fa-x-twitter icon"></i></a>
+      <a href="https://www.linkedin.com/company/meritusai/" target="_blank"><i class="fab fa-linkedin-in icon"></i></a>
+      <a href="https://www.youtube.com/@meritusai6766" target="_blank"><i class="fab fa-youtube icon"></i></a>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 DataSciensPro. All rights reserved.</p>
+  </footer>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Password Popup -->
+  <div class="popup" id="popup">
+    <div style="position: relative;">
+      <input type="password" id="passkey" placeholder="Enter Passkey" />
+    </div>
+    <button onclick="validatePasskey()">Submit</button>
+    <div id="message" class="message"></div>
+  </div>
+
+  <!-- Update Confirmation Popup -->
+  <div class="popup" id="updatePopup">
+    <p>Check for updates?</p>
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <script>
+    const correctPasskey = '0104';
+    const googleDriveLink = 'https://drive.google.com/file/d/1EljfTVYf-ruzMTfTtnaBf4eJ5oVWW2Sr/view?usp=sharing';
+    const githubLink = 'https://github.com/robotixdevteam/Data-Science-Pro?tab=readme-ov-file#updates';
+
+    function showPopup() {
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function hidePopup() {
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function showUpdatePopup() {
+      // Show update confirmation popup (overlay remains active)
+      document.getElementById('updatePopup').style.display = 'block';
+    }
+
+    function hideUpdatePopup() {
+      document.getElementById('updatePopup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+
+    function validatePasskey() {
+      const passkey = document.getElementById('passkey').value;
+      const messageElement = document.getElementById('message');
+
+      if (passkey === correctPasskey) {
+        messageElement.textContent = 'Success';
+        messageElement.className = 'message success';
+        setTimeout(() => {
+          hidePopup();
+          showUpdatePopup();
+        }, 1000); // Short delay before showing update dialog
+      } else {
+        messageElement.textContent = 'Wrong Passkey';
+        messageElement.className = 'message error';
+      }
+    }
+
+    // Event listener for Enter key on passkey input
+    document.getElementById('passkey').addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        validatePasskey();
+      }
+    });
+
+    // Handle Yes/No buttons in update popup
+    document.getElementById('yesBtn').addEventListener('click', function () {
+      hideUpdatePopup();
+      window.location.href = githubLink;
+    });
+    document.getElementById('noBtn').addEventListener('click', function () {
+      hideUpdatePopup();
+      window.location.href = googleDriveLink;
+    });
+
+    // When clicking outside the popup (overlay), hide all popups
+    document.getElementById('overlay').addEventListener('click', function () {
+      hidePopup();
+      hideUpdatePopup();
+    });
+
+    // Intercept the DSPRO Software download link to show the password popup
+    document.getElementById('dspSetupLink').addEventListener('click', function (e) {
+      e.preventDefault();
+      showPopup();
+    });
+  </script>
+</body>
+</html>
