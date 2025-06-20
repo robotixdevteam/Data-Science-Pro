@@ -172,6 +172,58 @@
       background: rgba(0, 0, 0, 0.5);
       z-index: 999;
     }
+    .feedback-flyout {
+  position: fixed;
+  bottom: 18px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.feedback-flyout a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 25px;
+  text-decoration: none;
+  overflow: hidden;
+  width: 42px;
+  box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+  white-space: nowrap;
+}
+
+.feedback-flyout a i {
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+}
+
+.feedback-flyout a:hover {
+  width: 125px;
+}
+
+.feedback-flyout a:hover i {
+  margin-right: 8px;
+}
+
+.feedback-flyout a .feedback-text {
+  opacity: 0;
+  width: 0;
+  transition: opacity 0.3s ease, width 0.3s ease;
+  overflow: hidden;
+}
+
+.feedback-flyout a:hover .feedback-text {
+  opacity: 1;
+  width: auto;
+}
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
@@ -230,8 +282,14 @@
       <a href="https://www.youtube.com/@meritusai6766" target="_blank"><i class="fab fa-youtube icon"></i></a>
     </div>
   </main>
+  <div class="feedback-flyout">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSddPykaQPvq3rah3acqrVYKASojOgQLZvMd1TWlDgEzWNIjhQ/viewform?usp=sharing&ouid=109473255159937002773" target="_blank">
+    <i class="fas fa-comment-alt"></i>
+    <span class="feedback-text">Feedback</span>
+  </a>
+</div>
   <footer>
-    <p>&copy; 2024 DataSciensPro. All rights reserved.</p>
+    <p>&copy; 2025 <strong>DataSciensPro</strong>. All rights reserved. Developed by <a href="https://meritus.ai" target="_blank" style="color: #4A90E2;">Meritus AI</a></p>
   </footer>
 
   <!-- Overlay -->
@@ -239,12 +297,13 @@
 
   <!-- Password Popup -->
   <div class="popup" id="popup">
-    <div style="position: relative;">
-      <input type="password" id="passkey" placeholder="Enter Passkey" />
-    </div>
-    <button onclick="validatePasskey()">Submit</button>
-    <div id="message" class="message"></div>
+  <div style="position: relative;">
+    <input type="password" id="passkey" placeholder="Enter Passkey" />
   </div>
+  <button onclick="validatePasskey()">Submit</button>
+  <button onclick="hidePopup()">Cancel</button>
+  <div id="message" class="message"></div>
+</div>
 
   <!-- Update Confirmation Popup -->
   <div class="popup" id="updatePopup">
@@ -335,6 +394,13 @@
     document.getElementById('overlay').addEventListener('click', function () {
       hidePopup();
       hideUpdatePopup();
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        hidePopup();
+        hideUpdatePopup();
+      }
     });
   </script>
 </body>
