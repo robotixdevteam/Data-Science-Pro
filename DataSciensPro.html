@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DataSciensPro</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" /> <!-- Favicon link -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -31,7 +31,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 85vh; /* Adjusted height to fill viewport */
+      height: 85vh;
       margin-top: -50px;
     }
     table {
@@ -54,18 +54,18 @@
       background-color: #deefff;
     }
     .noborder {
-      border: none; /* No border for this column */
+      border: none;
     }
     .info-icon {
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative; /* Position relative for tooltip positioning */
+      position: relative;
     }
     .info-icon i {
-      font-size: 18px; /* Adjust icon size */
-      color: #333; /* Adjust icon color */
-      cursor: pointer; /* Pointer cursor for better UX */
+      font-size: 18px;
+      color: #333;
+      cursor: pointer;
     }
     .tooltip {
       visibility: hidden;
@@ -78,7 +78,7 @@
       position: absolute;
       z-index: 1;
       top: 50%;
-      left: calc(100% + 10px); /* Position to the right of the icon */
+      left: calc(100% + 10px);
       transform: translateY(-50%);
       opacity: 0;
       transition: opacity 0.3s;
@@ -104,20 +104,19 @@
     .icon {
       font-size: 24px;
       margin: 0 20px;
-      color: #333; /* Adjust icon color */
+      color: #333;
     }
     .icon:hover {
-      color: #007bff; /* Change icon color on hover */
-      transform: scale(1.1); /* Increase icon size on hover */
+      color: #007bff;
+      transform: scale(1.1);
     }
     .info-icon:hover i {
-      color: #ff0000; /* Change icon color on hover */
-      transform: scale(1.1); /* Increase icon size on hover */
+      color: #ff0000;
+      transform: scale(1.1);
     }
 
-    /* Styles for the popup */
     .popup {
-      display: none; /* Hidden by default */
+      display: none;
       position: fixed;
       left: 50%;
       top: 50%;
@@ -132,12 +131,12 @@
       text-align: center;
     }
     .popup input[type="password"] {
-      width: calc(100% - 22px); /* Adjusted width to fit with eye icon */
+      width: calc(100% - 22px);
       padding: 10px;
       border: 2px solid #007bff;
       border-radius: 4px;
       margin-bottom: 10px;
-      position: relative; /* Position relative for eye icon */
+      position: relative;
     }
     .popup button {
       background-color: #007bff;
@@ -164,7 +163,7 @@
       color: red;
     }
     .overlay {
-      display: none; /* Hidden by default */
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -174,8 +173,7 @@
       z-index: 999;
     }
   </style>
-  <!-- Font Awesome CSS link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-..." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -186,17 +184,20 @@
       <tr>
         <th>Pre-Requisites</th>
         <th>Download Links</th>
-        <th class="noborder"></th> <!-- Third column with no border -->
+        <th class="noborder"></th>
       </tr>
       <tr>
         <td><b>DSPRO Software</b></td>
-        <td><a href="#" id="dspSetupLink">Click here to download DSPRO Software</a></td>
+        <td>
+          <a href="#" onclick="handleVersion('v1')">Download DSPRO v1.0</a> / 
+          <a href="#" onclick="handleVersion('v2')">Download DSPRO v2.0</a>
+        </td>
         <td class="noborder info-icon">
           <a href="https://drive.google.com/file/d/1fIkkAdUdd-2VHgkgUeeA8TFst3oyOs7p/view?usp=sharing" target="_blank">
             <i class="fas fa-exclamation" title="DSPRO"></i>
           </a>
           <span class="tooltip">The downloaded file should be extracted in the User-Profile path <br /><br />Ex: <b>C:\Users\John</b></span>
-        </td> <!-- Info icon in circle with tooltip -->
+        </td>
       </tr>
       <tr>
         <td><b>Miniconda</b></td>
@@ -206,7 +207,7 @@
         <td class="noborder info-icon">
           <i class="fas fa-exclamation" title="Miniconda"></i>
           <span class="tooltip">Download and extract the same in your User-Profile path <br /><br /><b>Ignore if already exists</b></span>
-        </td> <!-- Info icon in circle with tooltip -->
+        </td>
       </tr>
       <tr>
         <td><b>Microsoft Power BI</b></td>
@@ -217,11 +218,10 @@
         <td class="noborder info-icon">
           <i class="fas fa-exclamation" title="Power BI"></i>
           <span class="tooltip">Download your requirement and extract the same to C:\Program Files <br /><br /><b>Ignore if already exists</b></span>
-        </td> <!-- Info icon in circle with tooltip -->
+        </td>
       </tr>
     </table>
 
-    <!-- Icons section -->
     <div class="icons">
       <a href="https://www.facebook.com/meritusai/" target="_blank"><i class="fab fa-facebook-f icon"></i></a>
       <a href="https://www.instagram.com/meritus.ai/" target="_blank"><i class="fab fa-instagram icon"></i></a>
@@ -257,20 +257,23 @@
     const correctPasskey = '0104';
     const googleDriveLink = 'https://drive.google.com/file/d/1EljfTVYf-ruzMTfTtnaBf4eJ5oVWW2Sr/view?usp=sharing';
     const githubLink = 'https://github.com/robotixdevteam/Data-Science-Pro?tab=readme-ov-file#updates';
+    const wirelessLink = 'https://github.com/robotixdevteam/Data-Science-Pro?tab=readme-ov-file#updates';
+
+    let selectedVersion = '';
+
+    function handleVersion(version) {
+      selectedVersion = version;
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('updatePopup').style.display = 'block';
+    }
 
     function showPopup() {
-      document.getElementById('overlay').style.display = 'block';
       document.getElementById('popup').style.display = 'block';
     }
 
     function hidePopup() {
-      document.getElementById('overlay').style.display = 'none';
       document.getElementById('popup').style.display = 'none';
-    }
-
-    function showUpdatePopup() {
-      // Show update confirmation popup (overlay remains active)
-      document.getElementById('updatePopup').style.display = 'block';
+      document.getElementById('overlay').style.display = 'none';
     }
 
     function hideUpdatePopup() {
@@ -287,15 +290,14 @@
         messageElement.className = 'message success';
         setTimeout(() => {
           hidePopup();
-          showUpdatePopup();
-        }, 1000); // Short delay before showing update dialog
+          window.location.href = googleDriveLink;
+        }, 1000);
       } else {
         messageElement.textContent = 'Wrong Passkey';
         messageElement.className = 'message error';
       }
     }
 
-    // Event listener for Enter key on passkey input
     document.getElementById('passkey').addEventListener('keydown', function (event) {
       if (event.key === 'Enter') {
         event.preventDefault();
@@ -303,26 +305,23 @@
       }
     });
 
-    // Handle Yes/No buttons in update popup
     document.getElementById('yesBtn').addEventListener('click', function () {
       hideUpdatePopup();
       window.location.href = githubLink;
     });
+
     document.getElementById('noBtn').addEventListener('click', function () {
       hideUpdatePopup();
-      window.location.href = googleDriveLink;
+      if (selectedVersion === 'v1') {
+        showPopup();
+      } else if (selectedVersion === 'v2') {
+        window.location.href = wirelessLink;
+      }
     });
 
-    // When clicking outside the popup (overlay), hide all popups
     document.getElementById('overlay').addEventListener('click', function () {
       hidePopup();
       hideUpdatePopup();
-    });
-
-    // Intercept the DSPRO Software download link to show the password popup
-    document.getElementById('dspSetupLink').addEventListener('click', function (e) {
-      e.preventDefault();
-      showPopup();
     });
   </script>
 </body>
