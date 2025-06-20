@@ -254,10 +254,11 @@
   </div>
 
   <script>
-    const correctPasskey = '0104';
+    const correctPasskeyV1 = '0104';
+    const correctPasskeyV2 = '0104';
     const googleDriveLink = 'https://drive.google.com/file/d/1EljfTVYf-ruzMTfTtnaBf4eJ5oVWW2Sr/view?usp=sharing';
     const githubLink = 'https://github.com/robotixdevteam/Data-Science-Pro?tab=readme-ov-file#updates';
-    const wirelessLink = 'https://github.com/robotixdevteam/Data-Science-Pro?tab=readme-ov-file#updates';
+    const wirelessLink = 'https://drive.google.com/drive/folders/1oC70dq1eZFlH5Xl5hCNqXSYNqhBuTG5z?usp=sharing';
 
     let selectedVersion = '';
 
@@ -285,13 +286,25 @@
       const passkey = document.getElementById('passkey').value;
       const messageElement = document.getElementById('message');
 
-      if (passkey === correctPasskey) {
-        messageElement.textContent = 'Success';
-        messageElement.className = 'message success';
+      let isValid = false;
+
+      if (selectedVersion === 'v1' && passkey === correctPasskeyV1) {
+        isValid = true;
         setTimeout(() => {
           hidePopup();
           window.location.href = googleDriveLink;
         }, 1000);
+      } else if (selectedVersion === 'v2' && passkey === correctPasskeyV2) {
+        isValid = true;
+        setTimeout(() => {
+          hidePopup();
+          window.location.href = wirelessLink;
+        }, 1000);
+      }
+
+      if (isValid) {
+        messageElement.textContent = 'Success';
+        messageElement.className = 'message success';
       } else {
         messageElement.textContent = 'Wrong Passkey';
         messageElement.className = 'message error';
@@ -315,7 +328,7 @@
       if (selectedVersion === 'v1') {
         showPopup();
       } else if (selectedVersion === 'v2') {
-        window.location.href = wirelessLink;
+        showPopup();
       }
     });
 
