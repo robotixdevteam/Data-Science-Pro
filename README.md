@@ -45,6 +45,9 @@ All necessary installation files for **DSPRO Software, Miniconda, and Microsoft 
 ## Support
 For issues or contributions, please contact the development team through our official [DSPRO Homepage](https://robotixdevteam.github.io/Data-Science-Pro/DataSciensPro.html) and via [Email](development@merituseducation.com).
 
+## Share Your Thoughts
+We’re building DSPRO for you. [Tell us](https://docs.google.com/forms/d/e/1FAIpQLSddPykaQPvq3rah3acqrVYKASojOgQLZvMd1TWlDgEzWNIjhQ/viewform?usp=sharing&ouid=109473255159937002773) what worked well and what can be better — your feedback shapes the future.
+
 ---
 🚀 **Empowering students with real-world data science solutions!**
 
