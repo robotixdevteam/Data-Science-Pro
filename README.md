@@ -18,7 +18,7 @@ DataSciensPro enables students to **collect, analyze, and interpret** environmen
 
 | **Release** | **Summary** |
 |-------------|-------------|
-| [DSPRO v2.0.0.1](https://nimble.li/k96ynpnd) (Latest)| Wireless Configuration using Wi-Fi and Bluetooth Capabilities |
+| [DSPRO v2.0.0.1](https://nimble.li/k96ynpnd) | Wireless Configuration using Wi-Fi and Bluetooth Capabilities |
 | [DSPRO v1.0.0.2](https://nimble.li/wdjavq6d) | PuTTY based Data Collection, DSPRO Configuration Tool & DSPRO Uninstall Process (DUP) |
 | [DSPRO v1.0.0.1](https://nimble.li/a98wbyl9) | Initial release of DataSciensPro with core features. |
 
