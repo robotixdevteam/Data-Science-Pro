@@ -14,7 +14,7 @@ DataSciensPro is an innovative educational solution designed to empower students
 
 DataSciensPro enables students to **collect, analyze, and interpret** environmental and health-related data in real-time. The platform integrates a software interface with tools for **data visualization**, allowing students to understand complex problems and develop solutions using **data science and technology**.
 
-## Updates
+## Software Updates
 
 | **Release** | **Summary** |
 |-------------|-------------|
